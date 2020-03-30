@@ -6,23 +6,25 @@
 --------------------Configuration: QG weekwork - Win32 Debug--------------------
 </h3>
 <h3>Command Lines</h3>
-Creating temporary file "C:\Users\92540\AppData\Local\Temp\RSPF68.tmp" with contents
+Creating temporary file "C:\Users\92540\AppData\Local\Temp\RSPE06D.tmp" with contents
 [
 /nologo /MLd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /Fp"Debug/QG weekwork.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
-"C:\vsc++6.0\Microsoft Visual Studio\MyProjects\QG weekwork\danlianbiao.c"
+"C:\Users\92540\QGweekwork\QGweekwork\main.c"
 ]
-Creating command line "cl.exe @C:\Users\92540\AppData\Local\Temp\RSPF68.tmp" 
-Creating temporary file "C:\Users\92540\AppData\Local\Temp\RSPF79.tmp" with contents
+Creating command line "cl.exe @C:\Users\92540\AppData\Local\Temp\RSPE06D.tmp" 
+Creating temporary file "C:\Users\92540\AppData\Local\Temp\RSPE06E.tmp" with contents
 [
 kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:console /incremental:yes /pdb:"Debug/QG weekwork.pdb" /debug /machine:I386 /out:"Debug/QG weekwork.exe" /pdbtype:sept 
-".\Debug\danlianbiao.obj"
+.\Debug\danlianbiao.obj
+.\Debug\main.obj
 ]
-Creating command line "link.exe @C:\Users\92540\AppData\Local\Temp\RSPF79.tmp"
+Creating command line "link.exe @C:\Users\92540\AppData\Local\Temp\RSPE06E.tmp"
 <h3>Output Window</h3>
 Compiling...
-danlianbiao.c
-C:\vsc++6.0\Microsoft Visual Studio\MyProjects\QG weekwork\danlianbiao.c(16) : warning C4101: 'e' : unreferenced local variable
+main.c
+C:\Users\92540\QGweekwork\QGweekwork\main.c(8) : warning C4101: 'e' : unreferenced local variable
 Linking...
+main.obj : error LNK2005: _m already defined in danlianbiao.obj
 
 
 
