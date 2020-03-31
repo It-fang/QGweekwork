@@ -4,7 +4,6 @@
 
 
 
-
 void CreateList_R(LinkList *L,int n)	//初始化并根据后插法创建链表
 {
 	LinkList p = NULL , r = NULL;
@@ -18,7 +17,6 @@ void CreateList_R(LinkList *L,int n)	//初始化并根据后插法创建链表
 		gets(p->data.name);
 		printf("Please input people's age:");
 		gets(p->data.age);
-		m++;
 		r ->next = p;
 		r = p;
 	}
@@ -70,7 +68,6 @@ int LinkInsert(LinkList *L,int i,ElemType e)		//在特定位置插入元素
 	s->data = e;
 	s->next = p->next;
 	p->next = s;
-	m++;
 	return 1;
 }	
 
@@ -92,7 +89,6 @@ int LinkDelete(LinkList *L,int i)				//删除特定位置的元素
 	q = p->next ;
 	p->next = q->next ;
 	free(q);
-	m--;
 	return 1;
 }
 
@@ -108,4 +104,15 @@ int	ClearList(LinkList *L)				//将整个链表清空
 	}
 	(*L)->next  = NULL;
 	return 1;
+}
+
+void showmenu()				//打印菜单
+{
+	system("cls");
+	printf("				--------------------------------------------------\n");
+	printf("				|       1.创建链表               2.打印链表    |\n");
+	printf("				|       3.获得结点               4.增加结点        |\n");
+	printf("				|       5.删除结点               6.链表清空        |\n");
+	printf("				|                                0.退出系统        |\n");
+	printf("				----------------------------------------------------\n");
 }
