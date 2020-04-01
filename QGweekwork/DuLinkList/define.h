@@ -24,4 +24,5 @@ int GetElem(DLinkList L,int i,ElemType *e);	//获得特定位置的元素
 int DLinkInsert(DLinkList *L,int i,ElemType e);	//在特定位置插入元素
 int DLinkDelete(DLinkList *L,int i);				//删除特定位置的元素
 int	ClearList(DLinkList *L);					//将整个链表清空
+void Showmenu();				//打印菜单
 #endif

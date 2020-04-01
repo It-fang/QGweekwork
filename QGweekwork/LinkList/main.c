@@ -7,17 +7,17 @@ int main()
 	LinkList head = NULL;
 	ElemType e;
 	int boolean;
-	int selete;
+	int select;
 	int num;
 
 	while(1)
 	{
 		Showmenu();
 		printf("Please input what you want to do :");
-		scanf("%d",&selete);
+		scanf("%d",&select);
 		getchar();
 		system("cls");
-		switch(selete)
+		switch(select)
 		{
 		case 1:{
 					printf("Please input how much you want to add:");
@@ -47,6 +47,7 @@ int main()
 		case 4:{
 					printf("Please input where you want to insert:");
 					scanf("%d",&num);
+					getchar();
 					printf("Please input people'name who you want to insert:");
 					gets(e.name);
 					printf("Please input people'age who you want to insert:");
