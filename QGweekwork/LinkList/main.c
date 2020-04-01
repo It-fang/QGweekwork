@@ -12,7 +12,7 @@ int main()
 
 	while(1)
 	{
-		showmenu();
+		Showmenu();
 		printf("Please input what you want to do :");
 		scanf("%d",&selete);
 		getchar();
@@ -82,6 +82,10 @@ int main()
 					{
 						printf("succeed to delete\n");
 					}
+					system("pause");
+			   }break;
+		case 7:{
+					Enchange(&head);
 					system("pause");
 			   }break;
 		case 0:{

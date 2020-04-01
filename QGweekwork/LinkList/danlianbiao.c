@@ -106,13 +106,35 @@ int	ClearList(LinkList *L)				//将整个链表清空
 	return 1;
 }
 
-void showmenu()				//打印菜单
+
+void Showmenu()				//打印菜单
 {
 	system("cls");
 	printf("				--------------------------------------------------\n");
 	printf("				|       1.创建链表               2.打印链表    |\n");
 	printf("				|       3.获得结点               4.增加结点        |\n");
 	printf("				|       5.删除结点               6.链表清空        |\n");
-	printf("				|                                0.退出系统        |\n");
+	printf("				|       7.结点奇偶调换           0.退出系统        |\n");
 	printf("				----------------------------------------------------\n");
+}
+
+void Enchange(LinkList *L)			//将奇偶结点数据域调换
+{
+	ElemType temp;
+	LinkList p = (*L)->next;
+	while(p)
+	{
+		if(p->next)
+		{
+			temp = p->data;
+			p->data = p->next->data;
+			p->next->data = temp;
+			p = p->next->next;
+		}
+		else
+		{
+			break;
+		}
+		
+	}
 }

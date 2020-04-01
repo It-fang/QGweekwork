@@ -21,5 +21,6 @@ int GetElem(LinkList L,int i,ElemType *e);	//获得特定位置的元素
 int LinkInsert(LinkList *L,int i,ElemType e);	//在特定位置插入元素
 int LinkDelete(LinkList *L,int i);				//删除特定位置的元素
 int	ClearList(LinkList *L);					//将整个链表清空
-void showmenu()	;		//打印菜单
+void Showmenu()	;		//打印菜单
+void Enchange(LinkList *L);			//将奇偶结点数据域调换
 #endif
