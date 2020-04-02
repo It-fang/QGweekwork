@@ -23,4 +23,5 @@ int LinkDelete(LinkList *L,int i);				//删除特定位置的元素
 int	ClearList(LinkList *L);					//将整个链表清空
 void Showmenu()	;		//打印菜单
 void Enchange(LinkList *L);			//将奇偶结点数据域调换
+void FindMidpoint(LinkList L,ElemType *e);			// 利用快慢指针寻找中点
 #endif

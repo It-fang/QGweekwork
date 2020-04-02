@@ -89,6 +89,11 @@ int main()
 					Enchange(&head);
 					system("pause");
 			   }break;
+		case 8:{
+					FindMidpoint(head,&e);
+					printf("name = %s,age = %s",e.name,e.age);
+					system("pause");
+			   }break;
 		case 0:{
 					exit(0);
 			   }
