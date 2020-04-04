@@ -4,10 +4,14 @@
 
 
 
-void CreateList_R(LinkList *L,int n)	//初始化并根据后插法创建链表
+int CreateList_R(LinkList *L,int n)	//初始化并根据后插法创建链表
 {
 	LinkList p = NULL , r = NULL;
 	int i;
+	if(*L)
+	{
+		return 0;
+	}
 	*L = (LinkList)malloc(LEN);
 	r = *L;
 	for(i = 0;i<n;i++)
@@ -21,16 +25,22 @@ void CreateList_R(LinkList *L,int n)	//初始化并根据后插法创建链表
 		r = p;
 	}
 	r->next = NULL;
+	return 1;
 }
 
 void LinkPrint(LinkList L)						//打印整个链表
 {
 	LinkList p = L->next;
+	if(!p)
+	{
+		printf("LinkList is Empty");
+	}
 	while(p)
 	{
 		printf("name = %s,age = %s\n",p->data.name,p->data.age);
 		p = p->next ;
 	}
+
 }
 
 int GetElem(LinkList L,int i,ElemType *e)			//获得特定位置的元素
@@ -121,22 +131,23 @@ void Showmenu()				//打印菜单
 
 void Enchange(LinkList *L)			//将奇偶结点数据域调换
 {
-	ElemType temp;
 	LinkList p = (*L)->next;
-	while(p)
-	{
-		if(p->next)
+	while(p&&p->next)
+	{	
+
+		if(p == (*L)->next)
 		{
-			temp = p->data;
-			p->data = p->next->data;
-			p->next->data = temp;
-			p = p->next->next;
+			(*L)->next = p->next;
+			p->next = p->next->next;
+			(*L)->next->next = p;
 		}
 		else
 		{
-			break;
+			p->next = p->next->next;
+			p->next->next=p;
 		}
-		
+
+		p = p->next;		
 	}
 }
 

@@ -15,7 +15,7 @@ typedef	struct LNode
 }LNode, * LinkList;
 
 
-void CreateList_R(LinkList *L,int n);		//初始化并根据后插法创建链表
+int CreateList_R(LinkList *L,int n);		//初始化并根据后插法创建链表
 void LinkPrint(LinkList L);					//打印整个链表
 int GetElem(LinkList L,int i,ElemType *e);	//获得特定位置的元素
 int LinkInsert(LinkList *L,int i,ElemType e);	//在特定位置插入元素

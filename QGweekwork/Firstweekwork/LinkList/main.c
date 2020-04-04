@@ -23,14 +23,34 @@ int main()
 					printf("Please input how much you want to add:");
 					scanf("%d",&num);
 					getchar();
-					CreateList_R(&head,num);
+					boolean = CreateList_R(&head,num);
+					if(boolean == 1)
+					{
+						printf("succeed to create\n");
+					}
+					else if(boolean == 0)
+					{
+						printf("Link already exist\n");
+					}
 					system("pause");
 				 }break;
 		case 2:{
+					if(!head)
+					{
+						printf("LinkList is inexistence");
+						system("pause");
+						break;
+					}
 					LinkPrint(head);
 					system("pause");
 			   }break;
 		case 3:{
+					if(!head)
+					{
+						printf("LinkList is inexistence");
+						system("pause");
+						break;
+					}
 					printf("Please input where you want to get:");
 					scanf("%d",&num);
 					boolean = GetElem(head,num,&e);
@@ -45,6 +65,12 @@ int main()
 					system("pause");
 				}break;
 		case 4:{
+					if(!head)
+					{
+						printf("LinkList is inexistence");
+						system("pause");
+						break;
+					}
 					printf("Please input where you want to insert:");
 					scanf("%d",&num);
 					getchar();
@@ -64,6 +90,12 @@ int main()
 					system("pause");
 			   }break;
 		case 5:{
+					if(!head)
+					{
+						printf("LinkList is inexistence");
+						system("pause");
+						break;
+					}
 					printf("Please input where you want to delete:");
 					scanf("%d",&num);
 					boolean = LinkDelete(&head,num);
@@ -78,6 +110,12 @@ int main()
 					system("pause");
 			   }break;
 		case 6:{
+					if(!head)
+					{
+						printf("LinkList is inexistence");
+						system("pause");
+						break;
+					}
 					boolean = ClearList(&head);
 					if(boolean == 1)
 					{
@@ -86,10 +124,22 @@ int main()
 					system("pause");
 			   }break;
 		case 7:{
+					if(!head)
+					{
+						printf("LinkList is inexistence");
+						system("pause");
+						break;
+					}
 					Enchange(&head);
 					system("pause");
 			   }break;
 		case 8:{
+					if(!head)
+					{
+						printf("LinkList is inexistence");
+						system("pause");
+						break;
+					}
 					FindMidpoint(head,&e);
 					printf("name = %s,age = %s",e.name,e.age);
 					system("pause");
